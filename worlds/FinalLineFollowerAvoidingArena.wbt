@@ -1,0 +1,54 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.027347872275855403 -0.9840513431202861 -0.17576987223396479 2.872300192418052
+  position 0.1492828642434913 0.4527540410940128 -1.1273984741602698
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+E-puck {
+  translation 0.228925 -0.000363508 -0.213256
+  rotation -0.0008916424446599217 0.9999994986973214 -0.0004556082272107164 -1.4137653071795864
+  controller "my_followerline_controller"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.0175 0
+      name "ir1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.0175 0
+      name "ir0"
+      type "infra-red"
+    }
+  ]
+}
+TrackOne {
+  translation 0 -0.0075 0
+}
